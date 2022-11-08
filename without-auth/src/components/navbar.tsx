@@ -7,9 +7,8 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { UserButton } from "@clerk/clerk-react";
 
-export default function Nav() {
+const  Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
@@ -22,8 +21,6 @@ export default function Nav() {
               <Button onClick={toggleColorMode}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-
-              <UserButton userProfileUrl="/profile" />
             </Stack>
           </Flex>
         </Flex>
@@ -31,3 +28,5 @@ export default function Nav() {
     </>
   );
 }
+
+export default Nav
